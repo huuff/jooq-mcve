@@ -17,12 +17,12 @@ public class IssueTest {
         try (Connection conn = DriverManager.getConnection("jdbc:tc:postgresql:14.1:///")) {
             var dsl = DSL.using(conn, SQLDialect.POSTGRES);
             var query = dsl.select(
-                    row(currentLocalDateTime()).mapping(r -> mapping(InnerTestObject::new))
+                    row(currentLocalDateTime()).mapping(InnerTestObject::new)
             );
 
-            OuterTestObject result = query.fetch(mapping(OuterTestObject::new));
+            var result = query.fetchOne(mapping(OuterTestObject::new));
 
-
+            System.out.println(result);
         }
     }
 }

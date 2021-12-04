@@ -10,4 +10,11 @@ public class OuterTestObject {
     public InnerTestObject getInnerTestObject() {
         return innerTestObject;
     }
+
+    @Override
+    public String toString() {
+        return "OuterTestObject{" +
+                "innerTestObject=" + innerTestObject +
+                '}';
+    }
 }

@@ -12,4 +12,11 @@ public class InnerTestObject {
     public LocalDateTime getTimestamp() {
         return timestamp;
     }
+
+    @Override
+    public String toString() {
+        return "InnerTestObject{" +
+                "timestamp=" + timestamp +
+                '}';
+    }
 }
