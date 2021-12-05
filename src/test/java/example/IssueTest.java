@@ -22,7 +22,6 @@ public class IssueTest {
 
             var result = query.fetchOne(mapping(OuterTestObject::new));
 
-            System.out.println(result);
         }
     }
 }
